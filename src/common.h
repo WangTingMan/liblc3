@@ -23,7 +23,11 @@
 #include "fastmath.h"
 
 #include <limits.h>
+#ifdef _MSC_VER
+#if _MSC_VER > 1929
 #include <stdalign.h>
+#endif
+#endif
 #include <string.h>
 
 #ifdef __ARM_ARCH

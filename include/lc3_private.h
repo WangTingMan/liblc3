@@ -178,7 +178,11 @@ struct lc3_decoder {
  */
 
 #ifdef _WIN32
+#ifdef LIBLC3_EXPORTS
 #define LC3_EXPORT __declspec(dllexport)
+#else
+#define LC3_EXPORT __declspec(dllimport)
+#endif
 #else
 #define LC3_EXPORT __attribute__((visibility ("default")))
 #endif
